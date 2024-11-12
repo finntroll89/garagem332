@@ -56,7 +56,26 @@ function getTableStatus(status) {
 const menuItems = [
     { id: 1, name: 'Corona 290 ml', price: 7.00, image: 'bebidas/corona.jpg', category: 'bebidas' },
     { id: 2, name: 'Corona 350 ml', price: 10.00, image: 'bebidas/corona.jpg', category: 'bebidas' },
-    // ... resto dos seus itens ...
+    { id: 3, name: 'Bohemia 473 ml ', price: 4.00, image: 'bebidas/bohemia 473ml.jpg', category: 'bebidas' },
+    { id: 4, name: 'Back´s', price: 10.00, image: 'bebidas/Backs.jpg', category: 'bebidas' },
+    { id: 5, name: 'Patagonia Amber Lager', price: 10.00, image: 'bebidas/Patagonia.webp', category: 'bebidas' },
+    { id: 6, name: 'Patagonia Weisser', price: 10.00, image: 'bebidas/Patagonia weisser.jpg', category: 'bebidas' },
+    { id: 7, name: 'Budweiser', price: 15.00, image: 'bebidas/budweiser.jpeg', category: 'bebidas' },
+    { id: 8, name: 'Bohemia Litrão', price: 12.00, image: 'bebidas/bohemia Litrao.jpg', category: 'bebidas' },
+    { id: 9, name: 'Skol Litrão', price: 12.00, image: 'bebidas/skol litrao.jpg', category: 'bebidas' },
+    { id: 10, name: 'Antarctica Litrão', price: 12.00, image: 'bebidas/antarctica litrao.jpg', category: 'bebidas' },
+    { id: 11, name: 'Cabaré Ice', price: 10.00, image: 'bebidas/cabare ice.jpg', category: 'bebidas' },
+    { id: 12, name: 'Copão Vodka Intencion', price: 10.00, image: 'bebidas/copao vodka intencio.jpg', category: 'bebidas' },
+    { id: 6, name: 'Copão Gin Rock´s', price: 15.00, image: 'bebidas/copao gin rocks.jpg', category: 'bebidas' },
+    { id: 13, name: 'Copão Vodka Jack Daniel´S', price: 15.00, image: 'bebidas/jack deniels.jpg', category: 'bebidas' },
+    { id: 14, name: 'Drink´S', price: 20.00, image: 'bebidas/drinks.jpg', category: 'bebidas' },
+    { id: 15, name: 'Drink´s Abacaxi', price: 25.00, image: 'bebidas/Drinks Abacaxi.jpeg', category: 'bebidas' },
+    { id: 16, name: 'Drink´S De Frutas', price: 8.00, image: 'bebidas/drinks de frutas.jpg', category: 'bebidas' },
+    { id: 17, name: 'Camarão', price: 30.00, image: 'tiragosto/camarao.jpeg', category: 'tira-gostos' },
+    { id: 18, name: 'Batata Frita', price: 25.00, image: 'tiragosto/batata Frita.jpeg', category: 'tira-gostos' },
+    { id: 19, name: 'Frango Frito', price: 25.00, image: 'tiragosto/frangoFrinto.jpeg', category: 'tira-gostos' },
+    { id: 20, name: 'Isca de Carne com Batata Frita', price: 25.00, image: 'tiragosto/Isca de Carne com Batata.jpeg', category: 'tira-gostos' },
+
 ];
 
 // Carrinho de compras
