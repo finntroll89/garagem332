@@ -17,8 +17,8 @@ const ADMIN_PASS = process.env.ADMIN_PASS || 'garagem332';
 app.use(cors());
 app.use(express.json());
 
-// Servir arquivos estáticos
-app.use(express.static(__dirname));
+// Servir arquivos estáticos da pasta public
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Estado das mesas
 let tables = {
@@ -54,9 +54,9 @@ app.get('/api/tables/:number', (req, res) => {
     }
 });
 
-// Rota para todas as outras requisições (SPA fallback)
+// Rota para todas as outras requisições
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // WebSocket
