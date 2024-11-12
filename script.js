@@ -1,7 +1,7 @@
 // Configuração do WebSocket
 const WEBSOCKET_URL = window.location.hostname === 'localhost' 
-    ? 'ws://localhost:3000' 
-    : 'wss://seu-backend.onrender.com'; // Mude para sua URL do Render
+    ? 'ws://localhost:10000' 
+    : 'wss://garagem332.onrender.com'; 
 
 // Inicializar WebSocket
 const ws = new WebSocket(WEBSOCKET_URL);

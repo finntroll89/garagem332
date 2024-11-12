@@ -12,23 +12,13 @@ const wss = new WebSocket.Server({ server });
 // Configurações
 const ADMIN_USER = process.env.ADMIN_USER || 'admin';
 const ADMIN_PASS = process.env.ADMIN_PASS || 'garagem332';
-const ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    'https://garagem332.vercel.app', // Adicione seu domínio do Vercel aqui
-];
 
-// Configurar CORS
-app.use(cors({
-    origin: function(origin, callback) {
-        if (!origin || ALLOWED_ORIGINS.indexOf(origin) !== -1) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    }
-}));
-
+// Middleware
+app.use(cors());
 app.use(express.json());
+
+// Servir arquivos estáticos
+app.use(express.static(__dirname));
 
 // Estado das mesas
 let tables = {
@@ -62,6 +52,11 @@ app.get('/api/tables/:number', (req, res) => {
     } else {
         res.status(404).json({ message: 'Mesa não encontrada' });
     }
+});
+
+// Rota para todas as outras requisições (SPA fallback)
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // WebSocket
@@ -99,9 +94,13 @@ wss.on('connection', (ws) => {
             console.error('Erro ao processar mensagem:', error);
         }
     });
+
+    ws.on('close', () => {
+        console.log('Cliente desconectado');
+    });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 server.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
