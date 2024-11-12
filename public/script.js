@@ -52,6 +52,27 @@ function getTableStatus(status) {
 }
 
 
+function updateTablesDisplay() {
+    const tablesGrid = document.getElementById('tablesGrid');
+    tablesGrid.innerHTML = '';
+
+    Object.entries(tableStates).forEach(([number, table]) => {
+        const tableCard = document.createElement('div');
+        tableCard.className = `table-card ${table.status}`;
+        tableCard.innerHTML = `
+            <h4 class="text-center">Mesa ${number}</h4>
+            <p class="text-center mb-3">${getTableStatus(table.status)}</p>
+            <select class="form-select" onchange="updateTableStatus(${number}, this.value)">
+                <option value="available" ${table.status === 'available' ? 'selected' : ''}>Disponível</option>
+                <option value="occupied" ${table.status === 'occupied' ? 'selected' : ''}>Ocupada</option>
+                <option value="reserved" ${table.status === 'reserved' ? 'selected' : ''}>Reservada</option>
+            </select>
+        `;
+        tablesGrid.appendChild(tableCard);
+    });
+}
+
+
 // Array com os itens do menu
 const menuItems = [
     { id: 1, name: 'Corona 290 ml', price: 7.00, image: 'bebidas/corona.jpg', category: 'bebidas' },
@@ -75,7 +96,6 @@ const menuItems = [
     { id: 18, name: 'Batata Frita', price: 25.00, image: 'tiragosto/batata Frita.jpeg', category: 'tira-gostos' },
     { id: 19, name: 'Frango Frito', price: 25.00, image: 'tiragosto/frangoFrinto.jpeg', category: 'tira-gostos' },
     { id: 20, name: 'Isca de Carne com Batata Frita', price: 25.00, image: 'tiragosto/Isca de Carne com Batata.jpeg', category: 'tira-gostos' },
-
 ];
 
 // Carrinho de compras

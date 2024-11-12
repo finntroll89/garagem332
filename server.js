@@ -60,16 +60,14 @@ app.get('*', (req, res) => {
 });
 
 // WebSocket
-function broadcastTableUpdate() {
-    wss.clients.forEach((client) => {
-        if (client.readyState === WebSocket.OPEN) {
-            client.send(JSON.stringify({
-                type: 'tables',
-                data: tables
-            }));
-        }
-    });
-}
+ws.onmessage = (event) => {
+    const message = JSON.parse(event.data);
+    if (message.type === 'tables') {
+        tableStates = message.data;
+        updateTableSelectionOptions();
+        updateTablesDisplay(); // Chame a função para atualizar a exibição das mesas
+    }
+};
 
 wss.on('connection', (ws) => {
     console.log('Novo cliente conectado');
