@@ -1,0 +1,424 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos da seção hero */
+#hero {
+    position: relative;
+    background-image: url('background/transferir (1).jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #fff;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Camada preta translúcida */
+    z-index: 1;
+}
+
+#hero * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Estilos dos itens do menu */
+.menu-item {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.menu-item-info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-item-info h5 {
+    margin-bottom: 10px;
+}
+
+.menu-item-info p {
+    margin-bottom: 15px;
+}
+
+.menu-item-info .d-flex {
+    margin-top: auto;
+}
+
+#menu h2 {
+    color: #f7f4f4; /* Azul */
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-dark {
+    background-color: #080808 !important; /* Preto */
+    color: #fff; /* Branco para o texto */
+}
+
+.menu-dark h2 {
+    color: #fff; /* Certifique-se de que o título também fique visível */
+}
+#sobre img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+/* Centraliza botao do whatsapp */
+
+#whatsapp-link {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+/*
+#whatsapp-link:hover {
+    animation: flame 1.5s infinite, flicker 1.5s infinite alternate, color-change 3s infinite;
+    transform: scale(1.05);
+}
+
+/* Estilo base para os botões do modal 
+.modal-footer .btn {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    margin: 0 10px;
+    padding: 10px 20px;
+}
+*/
+/* Botão Confirmar Pedido 
+#confirmOrder {
+    color: #ff8c00;
+    text-shadow: 
+        0 0 5px #ff8c00, 
+        0 0 10px #ff8c00, 
+        0 0 15px #ff4500, 
+        0 0 20px #ff4500, 
+        0 0 30px #ff0000;
+    animation: flame 1.5s infinite, flicker 1.5s infinite alternate;
+}
+*/
+/* Botão Cancelar - com fogo mais intenso 
+.btn-secondary {
+    color: #ff4500 !important;
+    text-shadow: 
+        0 0 10px #ff8c00, 
+        0 0 20px #ff8c00, 
+        0 0 25px #ff4500, 
+        0 0 30px #ff4500, 
+        0 0 40px #ff0000,
+        0 0 50px #ff0000,
+        0 0 60px #ff0000;
+    animation: flame 1.2s infinite, flicker 1.2s infinite alternate !important;
+}
+*/
+/* Efeito hover para os botões
+#confirmOrder:hover,
+.btn-secondary:hover {
+    transform: scale(1.05);
+}
+ */
+/* Removendo estilos padrão do Bootstrap 
+.btn-primary,
+.btn-secondary {
+    background: none !important;
+    border: none !important;
+}
+*/
+/* Mantendo o efeito mais forte no hover do botão cancelar 
+.btn-secondary:hover {
+    text-shadow: 
+        0 0 15px #ff8c00, 
+        0 0 25px #ff8c00, 
+        0 0 35px #ff4500, 
+        0 0 45px #ff4500, 
+        0 0 55px #ff0000,
+        0 0 65px #ff0000,
+        0 0 75px #ff0000;
+}
+*/
+
+/* Ajuste de estilo para o botão */
+.btn-custom {
+    background-color: #6c757d; /* Cinza */
+    color: #fff; /* Branco para texto */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #5a6268; /* Cinza mais escuro para efeito hover */
+    transform: translateY(-8px); /* Efeito de subir um pouco */
+}
+
+/* Ajusta a margem superior para que o botão fique ainda mais elevado na página */
+.text-center.mt-1 {
+    margin-top: 0.8rem !important; /* Subindo um pouco mais */
+}
+
+/* botao index */
+/* Ajuste de estilo para o botão */
+.btn-custom {
+    background-color: #6c757d; /* Cinza */
+    color: #fff; /* Branco para texto */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #5a6268; /* Cinza mais escuro para efeito hover */
+    transform: translateY(-3px); /* Efeito de subir um pouco */
+}
+
+
+
+#galeria .card {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+#galeria .card:hover {
+    transform: translateY(-5px);
+}
+
+#galeria .card-img-top, #galeria video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+}
+
+#galeria .card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Flexibilidade para card layout */
+#galeria .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Controla o tamanho dos cards para distribuição uniforme */
+#galeria .col-md-3 {
+    flex: 0 0 23%; /* Aproximadamente 4 cards por linha */
+    max-width: 23%;
+}
+
+/* Ajustes para mais espaço entre os cards */
+#galeria .mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+#galeria .card-img-top, 
+#galeria video {
+    width: 100%; /* Ajusta a imagem ao tamanho do container */
+    max-width: 500px; /* Define um tamanho máximo para imagens */
+    height: auto; /* Ajusta a altura proporcionalmente */
+    object-fit: cover; /* Garante que a imagem ou vídeo ocupe todo o espaço disponível */
+    display: block; /* Garante que sejam elementos de bloco */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    border-radius: 0;
+}
+
+/* Ajustes no carrinho */
+.modal-content {
+    background-color: #3a3b3b;
+    color: #fff;
+}
+
+.modal-header,
+.modal-footer {
+    border-color: #333;
+}
+
+.modal-title {
+    color: #fff;
+}
+
+.btn-danger,
+.btn-success {
+    margin-left: 5px;
+}
+
+/* Efeito de fogo animado para o nome "Garagem 332" */
+.animated-logo {
+    font-family: 'Arial', sans-serif;
+    font-size: 2em; /* Ajuste conforme necessário */
+    color: #ff8c00; /* Cor inicial das "chamas" */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: flicker 1.5s infinite alternate, color-change 3s infinite;
+    position: relative;
+}
+
+/* Estilo de fogo para o texto */
+.fogo {
+    font-size: 4rem;
+    color: #ff8c00;
+    text-shadow: 
+        0 0 5px #ff8c00, 
+        0 0 10px #ff8c00, 
+        0 0 15px #ff4500, 
+        0 0 20px #ff4500, 
+        0 0 30px #ff0000, 
+        0 0 40px #ff0000, 
+        0 0 55px #ff0000;
+    position: relative;
+    display: inline-block;
+    animation: flame 1.5s infinite;
+}
+
+/* Animação para dar o efeito de fogo */
+@keyframes flame {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    25% {
+        transform: translateY(-5px) rotate(-2deg);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-10px) rotate(2deg);
+        opacity: 1;
+    }
+    75% {
+        transform: translateY(-5px) rotate(-1deg);
+        opacity: 0.9;
+    }
+}
+
+
+/* Animação para simular o movimento das chamas */
+@keyframes flicker {
+    0% {
+        text-shadow: 
+            0 0 10px #ff8c00, 
+            0 0 20px #ff4500, 
+            0 0 30px #ff0000, 
+            0 0 40px #ff8c00;
+    }
+    50% {
+        text-shadow: 
+            0 0 15px #ff8c00, 
+            0 0 25px #ff4500, 
+            0 0 35px #ff0000, 
+            0 0 45px #ff8c00;
+        transform: scale(1.05);
+    }
+    100% {
+        text-shadow: 
+            0 0 20px #ff8c00, 
+            0 0 30px #ff4500, 
+            0 0 40px #ff0000, 
+            0 0 50px #ff8c00;
+        transform: scale(1.1);
+    }
+}
+
+/* Animação de mudança de cor para um efeito "quente" */
+@keyframes color-change {
+    0%, 100% {
+        color: #ff8c00;
+    }
+    50% {
+        color: #ff4500;
+    }
+}
+
+
+
+/* Responsivo: Ajuste para telas menores */
+@media (max-width: 768px) {
+    #galeria .card-img-top, 
+    #galeria video {
+        width: 90%; /* Reduz um pouco o tamanho em telas menores */
+        max-width: 300px; /* Define um tamanho máximo para dispositivos móveis */
+    }
+}
+
+
+/* Responsividade para menos cards por linha em telas menores */
+@media (max-width: 992px) {
+    #galeria .col-md-3 {
+        flex: 0 0 31%; /* 3 cards por linha */
+        max-width: 31%;
+    }
+}
+
+@media (max-width: 768px) {
+    #galeria .col-md-3 {
+        flex: 0 0 48%; /* 2 cards por linha */
+        max-width: 48%;
+    }
+}
+
+@media (max-width: 576px) {
+    #galeria .col-md-3 {
+        flex: 0 0 100%; /* 1 card por linha */
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    #hero {
+        height: 50vh;
+    }
+}
+
