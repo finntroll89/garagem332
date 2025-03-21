@@ -1,5 +1,4 @@
-- Site pra bar em html, js, css
+#  Site pra bar em html, js, css
 
 ---
-
-# mais a frente sera colocado banco de dados 
+- mais a frente sera colocado banco de dados 
